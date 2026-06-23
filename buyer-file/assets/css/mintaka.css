@@ -5,6 +5,18 @@
   --mintaka-accent:#F5A623;
 }
 
+/* ===== Mobile: evita desbordes horizontales ===== */
+html, body{ overflow-x:hidden; }
+
+/* Hero: la palabra "videovigilancia" es muy larga; reducir y permitir quiebre */
+.hero-1 .hero-content h1{ overflow-wrap:break-word; word-break:break-word; }
+@media (max-width:575px){
+  .hero-1 .hero-content h1{ font-size:46px; line-height:104%; }
+}
+@media (max-width:400px){
+  .hero-1 .hero-content h1{ font-size:38px; }
+}
+
 /* Text wordmark logo (no brand SVG available yet) */
 .brand-name{
   font-weight:800;
