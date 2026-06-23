@@ -98,17 +98,21 @@ html, body{ overflow-x:hidden; }
 .mk-icon-card h4{ font-size:20px; margin-bottom:12px; color:var(--mintaka-navy); }
 .mk-icon-card p{ margin:0; color:#5b6b7b; line-height:1.65; }
 
-/* Valor agregado (brand-section): acentos en azul de la plantilla */
-.brand-section .mk-icon-card::before{
+/* Acentos en azul de la plantilla (valor agregado y diferenciadores) */
+.brand-section .mk-icon-card::before,
+.mk-cards-blue .mk-icon-card::before{
   background:radial-gradient(circle, rgba(89,210,243,.24), transparent 70%);
 }
-.brand-section .mk-icon-card::after{
+.brand-section .mk-icon-card::after,
+.mk-cards-blue .mk-icon-card::after{
   background:linear-gradient(90deg, #59D2F3, #9fe6fa);
 }
-.brand-section .mk-icon-card img{
+.brand-section .mk-icon-card img,
+.mk-cards-blue .mk-icon-card img{
   background:linear-gradient(135deg, #e8f9fe, #d2f1fb);
 }
-.brand-section .mk-icon-card:hover img{
+.brand-section .mk-icon-card:hover img,
+.mk-cards-blue .mk-icon-card:hover img{
   box-shadow:0 12px 24px rgba(89,210,243,.30);
 }
 
