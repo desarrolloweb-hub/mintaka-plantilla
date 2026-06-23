@@ -563,7 +563,7 @@
 
     // Type text area start here ***
     $(document).ready(function () {
-        const words = ["Developer", "Desinger", "Crypto"];
+        const words = ["videovigilancia", "conectividad", "tiempo real"];
         let index = 0;
         let letterIndex = 0;
         let direction = 1;
