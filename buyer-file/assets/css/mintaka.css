@@ -189,6 +189,18 @@ html, body{ overflow-x:hidden; }
   background:
     radial-gradient(1200px 600px at 85% -10%, rgba(245,166,35,.10), transparent 60%),
     var(--mintaka-navy);
+  padding-top:70px;
+  padding-bottom:70px;
+}
+.mk-about-section .section-title h2{ font-size:42px; line-height:1.12; }
+.mk-about-section .section-title-area{ margin-bottom:38px; }
+.mk-about-section .about-content ul .about-list{ margin-bottom:24px; }
+@media (max-width:1199px){
+  .mk-about-section .section-title h2{ font-size:34px; }
+}
+@media (max-width:575px){
+  .mk-about-section{ padding-top:50px; padding-bottom:50px; }
+  .mk-about-section .section-title h2{ font-size:26px; }
 }
 
 /* ===== Bloques de página interior de solución ===== */
