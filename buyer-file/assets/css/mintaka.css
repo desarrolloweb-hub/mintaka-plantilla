@@ -45,17 +45,58 @@ html, body{ overflow-x:hidden; }
 
 /* Mintaka value/diff icon tiles */
 .mk-icon-card{
+  position:relative;
+  overflow:hidden;
   background:#fff;
-  border:1px solid #eceff3;
-  border-radius:16px;
-  padding:34px 28px;
+  border:1px solid #eceef2;
+  border-radius:20px;
+  padding:36px 30px;
   height:100%;
-  transition:.3s;
+  z-index:0;
+  transition:transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s ease, border-color .4s ease;
 }
-.mk-icon-card:hover{ box-shadow:0 18px 40px rgba(11,34,57,.10); transform:translateY(-6px); }
-.mk-icon-card img{ width:64px; height:64px; object-fit:contain; margin-bottom:20px; }
-.mk-icon-card h4{ font-size:20px; margin-bottom:12px; }
-.mk-icon-card p{ margin:0; }
+/* Capa: resplandor decorativo en la esquina */
+.mk-icon-card::before{
+  content:"";
+  position:absolute; top:-50px; right:-50px;
+  width:140px; height:140px; border-radius:50%;
+  background:radial-gradient(circle, rgba(245,166,35,.20), transparent 70%);
+  opacity:0; transform:scale(.6);
+  transition:opacity .45s ease, transform .45s ease;
+  z-index:-1;
+}
+/* Capa: barra de acento inferior */
+.mk-icon-card::after{
+  content:"";
+  position:absolute; left:0; bottom:0;
+  width:100%; height:4px;
+  background:linear-gradient(90deg, var(--mintaka-accent), #ffce7a);
+  transform:scaleX(0); transform-origin:left;
+  transition:transform .45s cubic-bezier(.2,.7,.2,1);
+}
+.mk-icon-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 28px 54px rgba(11,34,57,.16);
+  border-color:transparent;
+}
+.mk-icon-card:hover::before{ opacity:1; transform:scale(1); }
+.mk-icon-card:hover::after{ transform:scaleX(1); }
+
+/* Capa: tile detrás del icono */
+.mk-icon-card img{
+  width:58px; height:58px; object-fit:contain;
+  padding:16px; box-sizing:content-box;
+  border-radius:16px;
+  background:linear-gradient(135deg, #fff6e6, #fdebcd);
+  margin-bottom:24px;
+  transition:transform .4s ease, background .4s ease, box-shadow .4s ease;
+}
+.mk-icon-card:hover img{
+  transform:rotate(-6deg) scale(1.06);
+  box-shadow:0 12px 24px rgba(245,166,35,.28);
+}
+.mk-icon-card h4{ font-size:20px; margin-bottom:12px; color:var(--mintaka-navy); }
+.mk-icon-card p{ margin:0; color:#5b6b7b; line-height:1.65; }
 
 /* Solution / product cards */
 .mk-solution-card{
