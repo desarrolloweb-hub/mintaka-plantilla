@@ -16,7 +16,12 @@ html, body{ overflow-x:hidden; }
   content:""; position:absolute; inset:0; z-index:0;
   background:linear-gradient(90deg, rgba(11,34,57,.82) 0%, rgba(11,34,57,.45) 55%, rgba(11,34,57,.12) 100%);
 }
-.hero-section.hero-1 > *{ position:relative; z-index:1; }
+/* Subir el contenido por encima del overlay SIN alterar el posicionamiento
+   absoluto de los elementos de la plantilla (icon-text, hero-list, client-info). */
+.hero-section.hero-1 .container-fluid{ position:relative; z-index:1; }
+.hero-1 .icon-text,
+.hero-1 .hero-list,
+.hero-1 .client-info{ z-index:2; }
 
 /* Título: escala fluida (evita el mal escalado) y quiebre de palabra larga */
 .hero-1 .hero-content h1{
