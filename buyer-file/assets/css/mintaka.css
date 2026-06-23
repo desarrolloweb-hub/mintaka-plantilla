@@ -103,6 +103,21 @@ html, body{ overflow-x:hidden; }
 }
 .cta-wrapper > *{ position:relative; z-index:1; }
 
+/* ===== Service-details: imagen superior como banner controlado ===== */
+.service-details-wrapper .details-image{ margin-bottom:50px; }
+.service-details-wrapper .details-image img{
+  width:100%;
+  aspect-ratio:16/7;
+  max-height:460px;
+  object-fit:cover;
+  object-position:center 62%;
+  border-radius:18px;
+  display:block;
+}
+@media (max-width:575px){
+  .service-details-wrapper .details-image img{ aspect-ratio:16/10; max-height:320px; }
+}
+
 /* ===== Solution detail sections (service-details) ===== */
 .mk-solution-detail{
   display:grid;
