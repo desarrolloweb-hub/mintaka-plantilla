@@ -103,6 +103,72 @@ html, body{ overflow-x:hidden; }
 }
 .cta-wrapper > *{ position:relative; z-index:1; }
 
+/* ===== Solution detail sections (service-details) ===== */
+.mk-solution-detail{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:56px;
+  align-items:center;
+  padding:64px 0;
+  border-top:1px solid #eceff3;
+}
+.mk-solution-detail:first-of-type{ border-top:none; }
+.mk-solution-detail.mk-reverse .mk-sd-media{ order:2; }
+
+.mk-sd-media{ position:relative; }
+.mk-sd-media > img{
+  width:100%;
+  border-radius:18px;
+  object-fit:cover;
+  aspect-ratio:4/3;
+  display:block;
+}
+.mk-sd-media-sub{
+  position:absolute;
+  right:-22px; bottom:-28px;
+  width:46%;
+  aspect-ratio:4/3;
+  border-radius:14px;
+  border:6px solid #fff;
+  box-shadow:0 18px 40px rgba(11,34,57,.18);
+}
+.mk-reverse .mk-sd-media-sub{ right:auto; left:-22px; }
+
+.mk-eyebrow{
+  display:inline-block;
+  font-size:13px; font-weight:700; letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--mintaka-accent);
+  margin-bottom:14px;
+}
+.mk-sd-body h3{
+  color:var(--mintaka-navy);
+  font-size:30px; line-height:1.2;
+  margin-bottom:16px;
+}
+.mk-sd-body p{ color:#5b6b7b; line-height:1.7; margin-bottom:24px; }
+
+.mk-feature-list{ list-style:none; padding:0; margin:0 0 30px; }
+.mk-feature-list li{
+  display:flex; align-items:flex-start; gap:12px;
+  color:#2a3a49; font-size:15px; line-height:1.5;
+  padding:11px 0;
+  border-bottom:1px dashed #e4e8ed;
+}
+.mk-feature-list li:last-child{ border-bottom:none; }
+.mk-feature-list li i{ color:var(--mintaka-accent); margin-top:3px; }
+
+@media (max-width:991px){
+  .mk-solution-detail{ grid-template-columns:1fr; gap:60px 0; padding:48px 0; }
+  .mk-solution-detail.mk-reverse .mk-sd-media{ order:0; }
+  .mk-sd-media-sub{ width:40%; right:10px; bottom:-24px; }
+  .mk-reverse .mk-sd-media-sub{ left:10px; }
+}
+@media (max-width:575px){
+  .mk-sd-body h3{ font-size:24px; }
+  .mk-sd-media-sub{ width:42%; right:0; bottom:-18px; border-width:4px; }
+}
+
 /* ===== Mintaka multi-column footer ===== */
 .mk-footer{
   background:var(--mintaka-navy);
