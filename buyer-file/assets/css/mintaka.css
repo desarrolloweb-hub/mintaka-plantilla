@@ -184,6 +184,13 @@ html, body{ overflow-x:hidden; }
   .mk-sd-media-sub{ width:42%; right:0; bottom:-18px; border-width:4px; }
 }
 
+/* ===== Sección "Quiénes somos" del index: fondo navy limpio ===== */
+.mk-about-section{
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(245,166,35,.10), transparent 60%),
+    var(--mintaka-navy);
+}
+
 /* ===== Bloques de página interior de solución ===== */
 .mk-apps-block,
 .mk-others-block{ padding-top:70px; margin-top:30px; border-top:1px solid #eceff3; }
