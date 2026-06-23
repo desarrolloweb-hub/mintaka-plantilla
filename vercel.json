@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/buyer-file/index.html" },
+    { "source": "/(.*)", "destination": "/buyer-file/$1" }
+  ]
+}
