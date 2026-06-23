@@ -184,6 +184,29 @@ html, body{ overflow-x:hidden; }
   .mk-sd-media-sub{ width:42%; right:0; bottom:-18px; border-width:4px; }
 }
 
+/* ===== Bloques de página interior de solución ===== */
+.mk-apps-block,
+.mk-others-block{ padding-top:70px; margin-top:30px; border-top:1px solid #eceff3; }
+.mk-apps-block .section-title h2,
+.mk-others-block .section-title h2{ color:var(--mintaka-navy); }
+.mk-apps-block .mk-eyebrow,
+.mk-others-block .mk-eyebrow{ display:block; margin-bottom:8px; }
+
+.mk-solution-link{
+  display:block; height:100%;
+  border:1px solid #eceff3; border-radius:18px; overflow:hidden;
+  background:#fff; transition:box-shadow .3s ease, transform .3s ease;
+}
+.mk-solution-link:hover{ box-shadow:0 20px 44px rgba(11,34,57,.14); transform:translateY(-4px); }
+.mk-solution-link .thumb img{
+  width:100%; aspect-ratio:16/9; object-fit:cover; display:block;
+}
+.mk-solution-link .content{ padding:22px 26px; }
+.mk-solution-link .content h3{ color:var(--mintaka-navy); font-size:22px; margin:0 0 8px; }
+.mk-link-arrow{ color:var(--mintaka-accent); font-weight:600; font-size:14px; }
+.mk-link-arrow i{ margin-left:6px; transition:margin .25s ease; }
+.mk-solution-link:hover .mk-link-arrow i{ margin-left:12px; }
+
 /* ===== Mintaka multi-column footer ===== */
 .mk-footer{
   background:var(--mintaka-navy);
