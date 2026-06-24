@@ -204,6 +204,14 @@ html, body{ overflow-x:hidden; }
   position:absolute; left:0; top:2px; color:var(--mk-ink); font-size:13px;
 }
 
+/* Sectores (index): la banda oscura cubría solo 25% y cortaba el título
+   blanco; se agranda la banda y se reduce el título para que quepa. */
+.case-study-section::before{ top:42% !important; }
+.case-study-section .section-title h2{ font-size:40px !important; line-height:1.16 !important; }
+@media (max-width:575px){
+  .case-study-section .section-title h2{ font-size:28px !important; }
+}
+
 /* Sector tiles (overlay sobre imagen) */
 .mk-sector-tile{
   display:block;
