@@ -649,3 +649,8 @@ html, body{ overflow-x:hidden; }
 .header-logo{ display:inline-flex; align-items:center; gap:10px; }
 .mk-logo-img{ height:42px; width:auto; display:block; }
 @media (max-width:575px){ .mk-logo-img{ height:36px; } }
+
+/* Logo en menú lateral y footer alineado con el wordmark */
+.offcanvas__logo a{ display:inline-flex; align-items:center; gap:10px; }
+.mk-footer-logo{ display:inline-flex; align-items:center; gap:11px; }
+.offcanvas__logo .mk-logo-img{ height:38px; }
