@@ -14,7 +14,9 @@ html, body{ overflow-x:hidden; }
 .hero-section.hero-1{ position:relative; }
 .hero-section.hero-1::before{
   content:""; position:absolute; inset:0; z-index:0;
-  background:linear-gradient(90deg, rgba(11,34,57,.82) 0%, rgba(11,34,57,.45) 55%, rgba(11,34,57,.12) 100%);
+  background:
+    linear-gradient(90deg, rgba(11,34,57,.90) 0%, rgba(11,34,57,.70) 55%, rgba(11,34,57,.55) 100%),
+    linear-gradient(180deg, rgba(11,34,57,.25) 0%, rgba(11,34,57,.45) 100%);
 }
 /* Subir el contenido por encima del overlay SIN alterar el posicionamiento
    absoluto de los elementos de la plantilla (icon-text, hero-list, client-info). */
