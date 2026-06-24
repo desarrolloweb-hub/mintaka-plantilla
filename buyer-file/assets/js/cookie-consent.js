@@ -130,33 +130,31 @@
     }).join("");
 
     wrap.innerHTML =
-      '<div class="mk-cc-card">' +
-        // Vista principal
-        '<div class="mk-cc-main" data-view="main">' +
-          '<div class="mk-cc-head">' +
+      // ---- Vista principal: barra inferior ----
+      '<div class="mk-cc-bar" data-view="main">' +
+        '<div class="mk-cc-bar-inner">' +
+          '<div class="mk-cc-text">' +
             '<span class="mk-cc-ico" aria-hidden="true"><i class="fa-solid fa-cookie-bite"></i></span>' +
-            "<h3>Preferencias de cookies</h3>" +
+            "<p><strong>Usamos cookies.</strong> Para que el sitio funcione, recordar tus preferencias, medir el tráfico y mostrar contenido relevante. Consulta nuestra <a href=\"" + PRIVACY_URL + "\">Política de privacidad</a>.</p>" +
           "</div>" +
-          "<p>Usamos cookies para que el sitio funcione, recordar tus preferencias, medir el tráfico y mostrar contenido relevante. Puedes aceptar todas, rechazar las opcionales o personalizar tu elección.</p>" +
           '<div class="mk-cc-actions">' +
-            '<button type="button" class="mk-cc-btn mk-cc-btn--primary" data-cc="accept">Aceptar todas</button>' +
             '<button type="button" class="mk-cc-btn mk-cc-btn--ghost" data-cc="reject">Rechazar opcionales</button>' +
-          "</div>" +
-          '<div class="mk-cc-links">' +
-            '<button type="button" class="mk-cc-link" data-cc="customize">Personalizar preferencias</button>' +
-            '<a class="mk-cc-link" href="' + PRIVACY_URL + '">Política de privacidad</a>' +
+            '<button type="button" class="mk-cc-btn mk-cc-btn--ghost" data-cc="customize">Personalizar</button>' +
+            '<button type="button" class="mk-cc-btn mk-cc-btn--primary" data-cc="accept">Aceptar todas</button>' +
           "</div>" +
         "</div>" +
-        // Panel de personalización
-        '<div class="mk-cc-panel" data-view="panel" hidden>' +
+      "</div>" +
+      // ---- Panel de personalización ----
+      '<div class="mk-cc-panel" data-view="panel" hidden>' +
+        '<div class="mk-cc-panel-inner">' +
           '<div class="mk-cc-head">' +
             '<span class="mk-cc-ico" aria-hidden="true"><i class="fa-solid fa-sliders"></i></span>' +
             "<h3>Personaliza tus preferencias</h3>" +
           "</div>" +
           '<div class="mk-cc-cats">' + catsHtml + "</div>" +
           '<div class="mk-cc-actions">' +
-            '<button type="button" class="mk-cc-btn mk-cc-btn--primary" data-cc="save">Guardar selección</button>' +
             '<button type="button" class="mk-cc-btn mk-cc-btn--ghost" data-cc="back">Atrás</button>' +
+            '<button type="button" class="mk-cc-btn mk-cc-btn--primary" data-cc="save">Guardar selección</button>' +
           "</div>" +
         "</div>" +
       "</div>";
@@ -196,6 +194,7 @@
     function showPanel(on) {
       panel.hidden = !on;
       main.hidden = on;
+      el.classList.toggle("mk-cc--panel-open", on);
     }
     function collectToggles() {
       var prefs = { necessary: true };
