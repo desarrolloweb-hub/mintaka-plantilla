@@ -558,3 +558,12 @@ html, body{ overflow-x:hidden; }
   .mk-footer-top{ grid-template-columns:1fr; gap:30px; }
   .mk-footer-bottom{ flex-direction:column; text-align:center; }
 }
+
+/* ===== Página legal (aviso de privacidad) ===== */
+.mk-legal{ max-width:820px; margin:0 auto; }
+.mk-legal .mk-legal-updated{ color:var(--mk-ink); font-weight:600; margin-bottom:24px; }
+.mk-legal p{ color:#5b6b7b; line-height:1.8; margin-bottom:16px; }
+.mk-legal h3{ color:var(--mintaka-navy); font-size:22px; margin:34px 0 12px; }
+.mk-legal ul{ color:#5b6b7b; line-height:1.8; margin:0 0 16px; padding-left:20px; }
+.mk-legal ul li{ margin-bottom:6px; }
+.mk-legal a{ color:var(--mk-ink); font-weight:600; }
