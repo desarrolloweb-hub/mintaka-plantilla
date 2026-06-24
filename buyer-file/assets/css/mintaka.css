@@ -654,3 +654,9 @@ html, body{ overflow-x:hidden; }
 .offcanvas__logo a{ display:inline-flex; align-items:center; gap:10px; }
 .mk-footer-logo{ display:inline-flex; align-items:center; gap:11px; }
 .offcanvas__logo .mk-logo-img{ height:38px; }
+
+/* Header sticky: no ennegrecer el logo (la imagen debe quedar a color);
+   se oscurece solo el texto del wordmark para que se lea sobre blanco. */
+.sticky.header-1 .logo{ filter:none !important; }
+.sticky.header-1 .header-logo .brand-name{ color:var(--mintaka-navy); }
+.sticky.header-1 .header-logo .brand-name b{ color:var(--mk-ink); }
