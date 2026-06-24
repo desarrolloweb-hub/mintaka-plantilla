@@ -71,7 +71,7 @@ html, body{ overflow-x:hidden; }
 .main-menu ul li > a{ position:relative; }
 .main-menu ul li > a.mk-active{ color:var(--mk-ink); }
 .main-menu ul li > a.mk-active::after{
-  content:""; position:absolute; left:0; right:0; bottom:-6px;
+  content:""; position:absolute; left:0; right:0; bottom:14px;
   height:2px; border-radius:2px; background:var(--mintaka-accent);
 }
 
