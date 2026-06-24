@@ -567,3 +567,89 @@ html, body{ overflow-x:hidden; }
 .mk-legal ul{ color:#5b6b7b; line-height:1.8; margin:0 0 16px; padding-left:20px; }
 .mk-legal ul li{ margin-bottom:6px; }
 .mk-legal a{ color:var(--mk-ink); font-weight:600; }
+
+/* ===== Cookie Consent ===== */
+:root{ --cc-accent:#59D2F3; }   /* acento configurable (cámbialo a #65d46e si lo quieres verde) */
+.mk-cc{
+  position:fixed; z-index:2000; right:24px; bottom:24px;
+  width:min(512px, calc(100vw - 32px));
+  opacity:0; transform:translateY(24px);
+  transition:opacity .5s ease, transform .5s cubic-bezier(.2,.7,.2,1);
+  pointer-events:none;
+}
+.mk-cc.is-visible{ opacity:1; transform:translateY(0); pointer-events:auto; }
+.mk-cc-card{
+  background:rgba(11,34,57,.82);
+  backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:22px;
+  box-shadow:0 30px 70px rgba(0,0,0,.45);
+  padding:26px 26px 22px;
+  color:#fff;
+}
+.mk-cc-head{ display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+.mk-cc-ico{
+  width:42px; height:42px; flex:none; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(101,212,110,0); background:color-mix(in srgb, var(--cc-accent) 18%, transparent);
+  color:var(--cc-accent); font-size:18px;
+}
+.mk-cc-head h3{ margin:0; color:#fff; font-size:20px; }
+.mk-cc-card > div > p,
+.mk-cc-main > p{ color:rgba(255,255,255,.78); font-size:14.5px; line-height:1.6; margin:0 0 18px; }
+.mk-cc-actions{ display:flex; gap:12px; flex-wrap:wrap; }
+.mk-cc-btn{
+  flex:1 1 auto; min-width:140px;
+  border:none; cursor:pointer; border-radius:50px;
+  padding:12px 20px; font-size:14px; font-weight:700;
+  transition:transform .25s ease, background .25s ease, color .25s ease, box-shadow .25s ease;
+}
+.mk-cc-btn--primary{ background:var(--cc-accent); color:#082033; }
+.mk-cc-btn--primary:hover{ transform:translateY(-2px); box-shadow:0 10px 24px color-mix(in srgb, var(--cc-accent) 40%, transparent); }
+.mk-cc-btn--ghost{ background:rgba(255,255,255,.08); color:#fff; border:1px solid rgba(255,255,255,.16); }
+.mk-cc-btn--ghost:hover{ background:rgba(255,255,255,.16); }
+.mk-cc-links{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-top:16px; }
+.mk-cc-link{
+  background:none; border:none; cursor:pointer; padding:0;
+  color:var(--cc-accent); font-size:13px; font-weight:600; text-decoration:none;
+}
+.mk-cc-link:hover{ text-decoration:underline; }
+
+/* Panel de categorías */
+.mk-cc-cats{ max-height:46vh; overflow-y:auto; margin:0 0 18px; padding-right:6px; }
+.mk-cc-cat{
+  display:flex; align-items:flex-start; gap:14px;
+  padding:14px 0; border-bottom:1px solid rgba(255,255,255,.1);
+}
+.mk-cc-cat:last-child{ border-bottom:none; }
+.mk-cc-cat-info{ flex:1; }
+.mk-cc-cat-info h4{ margin:0 0 4px; color:#fff; font-size:15px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.mk-cc-cat-info p{ margin:0; color:rgba(255,255,255,.62); font-size:13px; line-height:1.5; }
+.mk-cc-tag{ font-size:10.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--cc-accent); background:color-mix(in srgb, var(--cc-accent) 16%, transparent);
+  padding:3px 8px; border-radius:20px; }
+
+/* Switch */
+.mk-cc-switch{ position:relative; flex:none; width:46px; height:26px; }
+.mk-cc-switch input{ position:absolute; opacity:0; width:100%; height:100%; margin:0; cursor:pointer; }
+.mk-cc-slider{
+  position:absolute; inset:0; border-radius:50px;
+  background:rgba(255,255,255,.18); transition:background .25s ease;
+}
+.mk-cc-slider::before{
+  content:""; position:absolute; top:3px; left:3px;
+  width:20px; height:20px; border-radius:50%;
+  background:#fff; transition:transform .25s ease;
+}
+.mk-cc-switch input:checked + .mk-cc-slider{ background:var(--cc-accent); }
+.mk-cc-switch input:checked + .mk-cc-slider::before{ transform:translateX(20px); }
+.mk-cc-switch input:disabled{ cursor:not-allowed; }
+.mk-cc-switch input:disabled + .mk-cc-slider{ opacity:.7; }
+.mk-cc-switch input:focus-visible + .mk-cc-slider{ outline:2px solid var(--cc-accent); outline-offset:2px; }
+
+@media (max-width:575px){
+  .mk-cc{ right:12px; left:12px; bottom:12px; width:auto; }
+  .mk-cc-card{ padding:22px 20px 18px; border-radius:18px; }
+  .mk-cc-actions{ flex-direction:column; }
+  .mk-cc-btn{ width:100%; }
+}
