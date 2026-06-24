@@ -644,3 +644,8 @@ html, body{ overflow-x:hidden; }
   .mk-cc-bar-inner, .mk-cc-panel-inner{ padding:18px 18px; }
   .mk-cc-btn{ width:100%; flex:1 1 100%; }
 }
+
+/* ===== Logo (imagen) en el header, a la izquierda del wordmark ===== */
+.header-logo{ display:inline-flex; align-items:center; gap:10px; }
+.mk-logo-img{ height:42px; width:auto; display:block; }
+@media (max-width:575px){ .mk-logo-img{ height:36px; } }
