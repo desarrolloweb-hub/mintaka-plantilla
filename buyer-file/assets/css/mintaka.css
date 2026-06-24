@@ -662,3 +662,14 @@ html, body{ overflow-x:hidden; }
 .sticky.header-1 .logo{ filter:none !important; }
 .sticky.header-1 .header-logo .brand-name{ color:var(--mintaka-navy); }
 .sticky.header-1 .header-logo .brand-name b{ color:var(--mk-ink); }
+
+/* Ilustraciones decorativas a los lados del banner de Sectores (index) */
+.case-study-section{ overflow:hidden; }
+.mk-sector-ilus{
+  position:absolute; top:40px; height:230px; width:auto; z-index:1;
+  opacity:.20; filter:invert(1); pointer-events:none; user-select:none;
+}
+.mk-sector-ilus--left{ left:30px; }
+.mk-sector-ilus--right{ right:30px; }
+@media (max-width:1199px){ .mk-sector-ilus{ height:180px; opacity:.14; } }
+@media (max-width:991px){ .mk-sector-ilus{ display:none; } }
