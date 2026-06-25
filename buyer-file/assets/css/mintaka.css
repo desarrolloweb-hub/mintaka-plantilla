@@ -673,3 +673,17 @@ html, body{ overflow-x:hidden; }
 .mk-sector-ilus--right{ right:30px; }
 @media (max-width:1199px){ .mk-sector-ilus{ height:180px; opacity:.14; } }
 @media (max-width:991px){ .mk-sector-ilus{ display:none; } }
+
+/* ===== Contacto: tarjeta del formulario ===== */
+.contact-section .contact-content{
+  background:#fff;
+  border:1px solid #eceef2;
+  border-radius:22px;
+  padding:44px 44px 40px;
+  box-shadow:0 24px 60px rgba(11,34,57,.08);
+}
+.contact-section .contact-content h3{ font-size:26px; line-height:1.25; margin-bottom:28px; color:var(--mintaka-navy); }
+@media (max-width:575px){
+  .contact-section .contact-content{ padding:28px 22px; }
+  .contact-section .contact-content h3{ font-size:21px; }
+}
